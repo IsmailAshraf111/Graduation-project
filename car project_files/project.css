@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --color-car: #353535;
+  --color-car2: #edb625;
+  --color-car3: white;
+  --padding-top-car1: ;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+@media (min-width: 767px) {
+  .container {
+    width: 1100px;
+  }
+}
+ul {
+  list-style: none;
+}
+nav {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-car);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logo h3 {
+  font-size: 25px;
+  color: var(--color-car2);
+  animation: logoani 1s ease forwards;
+}
+.nav-link li a {
+  color: var(--color-car2);
+  font-size: 17px;
+  transition: 0.4s;
+}
+.nav-link li a:hover {
+  color: var(--color-car3);
+}
+.nav-link li .active {
+  color: var(--color-car3);
+}
+.social-link li a {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transform: rotate(45deg);
+  transition: 0.4s ease;
+}
+
+.social-link li a:hover {
+  border-color: var(--color-car3);
+}
+
+.social-link li a i {
+  transform: rotate(-45deg);
+  font-size: 20px;
+  color: var(--color-car2);
+}
+.social-link li a i:hover {
+  color: var(--color-car3);
+}
+/*End nav*/
+/*Start header*/
+header {
+  width: 100;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #cccccc;
+}
+.header-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.container header h1 {
+}
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 30px;
+  border: solid none var(--color-car);
+  border-radius: 10px;
+  background-color: var(--color-car2);
+  font-weight: 600;
+  transition: 0.4s;
+  letter-spacing: 0.4px;
+}
+.btn:hover {
+ 
+  color: var(--color-car2);
+  background-color: var(--color-car3);
+  border: solid 3px var(--color-car2);
+  font-size: 18px;
+}
+.header-left {
+  max-width: 570px;
+  position: relative;
+}
+.header-right {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  right: -7%;
+}
+.car {
+  height: 100%;
+  width: 100%;
+  border: 25px solid var(--color-car2);
+  background: var(--color-car3);
+  transform: rotate(-45deg);
+  box-shadow: -15px -15px -15px rgb(0, 0, 0, 0, 0.2);
+}
+.car img {
+  position: absolute;
+  transform: rotate(45deg);
+  max-width: 680px;
+  top: -20px;
+  left: -265px;
+}
+/*
+.car2 {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: var(--color-car2);
+  transform: rotate(45deg);
+  top: -26%;
+  right: -26%;
+  z-index: -50;
+}
+*/
+/*End header*/
+/*Animation Start*/
+@keyframes logoani {
+  0% {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 100%;
+  }
+}
+/*End Animaiton*/
+/*Start Abut*/
+.all-container {
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
+
+  color: var(--color-car);
+}
+
+.text i {
+  color: #edb625;
+  font-size: 30px;
+}
+.text {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 50px;
+  font-weight: 700;
+  line-height: 2;
+  color: var(--color-car);
+
+  text-align: center;
+  color: rgb(134, 131, 131);
+}
+.btn2{
+display: flex;
+justify-content: center;
+border: solid 1px var(--color-car2);
+margin: auto;
+width: fit-content;
+background-color: #edb625;
+color: #353535;
+padding: 10px 50px;
+font-size: 15px;
+border-radius: 15px;
+margin-top: 50px;
+margin-bottom: 50px;
+font-weight: 600;
+transition: .4s;
+}
+.btn2:hover{
+  background: none;
+ border: 2px solid var(--color-car2);
+ color: var(--color-car2);
+ font-size: 20px;
+}
+/*End Abut*/
+/*Start Displayed Cars*/
+
+.all-cars{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+ gap: 15px;
+}
+.all-cars .car-1{
+  
+  max-width: 350px;
+  text-align: center;
+   border: 2px solid var(--color-car);
+   display: inline-block;
+   height: 450px;
+   border-radius: 10px;
+   transition: .6s;
+}
+.all-cars .car-1:hover{
+ color: var(--color-car2);
+ background-color: var(--color-car);
+}
+.all-cars .car-1 img{
+width: 300px;  
+border-bottom: 1px solid;
+transition: 1s;
+}
+/*
+.all-cars .car-1 img:hover{
+  width: 500px;
+  border-bottom: none;
+}
+.all-cars .car-1 .text-1{
+*/
+
+.all-cars .btn-o1{
+ 
+  padding: 10px 30px;
+  border: 2px solid var(--color-car2);
+  border-radius: 10px;
+  color: var(--color-car);
+  background-color: var(--color-car2);
+  position: relative;
+  top: 40px;
+  transition: .4s;
+
+  
+}
+.all-cars .btn-o1:hover{
+  border: 1px solid ;
+  color: var(--color-car)3;
+ 
+  background: none;
+}
+.btn-3{
+  color: var(--color-car);
+  padding: 10px 60px ;
+  background-color: var(--color-car2);
+  border-radius: 10px;
+  text-align: center;
+}
+/*End Displayed Cars*/

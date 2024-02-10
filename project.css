@@ -1,0 +1,620 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --color-car: #353535;
+  --color-car2: #edb625;
+  --color-car3: white;
+  --padding-top-car1: ;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+@media (min-width: 767px) {
+  .container {
+    width: 1050px;
+  }
+}
+ul {
+  list-style: none;
+}
+nav {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-car);
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-container ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.logo h3 {
+  font-size: 25px;
+  color: var(--color-car2);
+  animation: logoani 1s ease forwards;
+}
+.nav-link li a {
+  color: var(--color-car2);
+  font-size: 17px;
+  transition: 0.4s;
+}
+.nav-link li a:hover {
+  color: var(--color-car3);
+}
+.nav-link li .active {
+  color: var(--color-car3);
+}
+.social-link li a {
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  transform: rotate(45deg);
+  transition: 0.4s ease;
+}
+
+.social-link li a:hover {
+  border-color: var(--color-car3);
+}
+
+.social-link li a i {
+  transform: rotate(-45deg);
+  font-size: 20px;
+  color: var(--color-car2);
+}
+.social-link li a i:hover {
+  color: var(--color-car3);
+}
+/*End nav*/
+/*Start header*/
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #cccccc;
+}
+.header-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.container header h1 {
+}
+.btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 30px;
+  border: solid none var(--color-car);
+  border-radius: 10px;
+  background-color: var(--color-car2);
+  font-weight: 600;
+  transition: 0.4s;
+  letter-spacing: 0.4px;
+}
+.btn:hover {
+  color: var(--color-car2);
+  background-color: var(--color-car3);
+  border: solid 3px var(--color-car2);
+  font-size: 18px;
+}
+.header-left {
+  max-width: 570px;
+  position: relative;
+}
+.header-right {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  right: -7%;
+}
+.car {
+  height: 100%;
+  width: 100%;
+  border: 25px solid var(--color-car2);
+  background: var(--color-car3);
+  transform: rotate(-45deg);
+  box-shadow: -15px -15px -15px rgb(0, 0, 0, 0, 0.2);
+}
+.car img {
+  position: absolute;
+  transform: rotate(45deg);
+  max-width: 680px;
+  top: -20px;
+  left: -265px;
+}
+/*
+.car2 {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: var(--color-car2);
+  transform: rotate(45deg);
+  top: -26%;
+  right: -26%;
+  z-index: -50;
+}
+*/
+/*End header*/
+/*Animation Start*/
+@keyframes logoani {
+  0% {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 100%;
+  }
+}
+/*End Animaiton*/
+/*Start About*/
+.all-container {
+  margin: 0;
+  text-align: center;
+  font-size: 45px;
+
+  color: var(--color-car);
+}
+
+.text i {
+  color: var(--color-car);
+  font-size: 30px;
+}
+.text {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 50px;
+  font-weight: 700;
+  line-height: 2;
+  color: var(--color-car);
+
+  text-align: center;
+  color: rgb(134, 131, 131);
+}
+.btn2 {
+  display: flex;
+  justify-content: center;
+  border: solid 1px var(--color-car2);
+  margin: auto;
+  width: fit-content;
+  background-color: #edb625;
+  color: #353535;
+  padding: 10px 50px;
+  font-size: 15px;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  transition: 0.4s;
+}
+.btn2:hover {
+  background: none;
+  border: 2px solid var(--color-car2);
+  color: var(--color-car2);
+  font-size: 20px;
+}
+/*End About*/
+/*Start Displayed Cars*/
+
+.all-cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+.all-cars .car-1 {
+  max-width: 350px;
+  text-align: center;
+  border: 2px solid var(--color-car);
+  display: inline-block;
+  height: 450px;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+.all-cars .car-1:hover {
+  color: var(--color-car2);
+  background-color: var(--color-car);
+}
+.all-cars .car-1 img {
+  width: 300px;
+  border-bottom: 1px solid;
+  transition: 1s;
+}
+/*
+.all-cars .car-1 img:hover{
+  width: 500px;
+  border-bottom: none;
+}
+.all-cars .car-1 .text-1{
+*/
+
+.all-cars .btn-o1 {
+  padding: 10px 30px;
+  border: 2px solid var(--color-car2);
+  border-radius: 10px;
+  color: var(--color-car);
+  background-color: var(--color-car2);
+  position: relative;
+  top: 40px;
+  transition: 0.4s;
+}
+.all-cars .btn-o1:hover {
+  border: 1px solid;
+  color: var(--color-car) 3;
+
+  background: none;
+}
+.btn-3 {
+  color: var(--color-car);
+  padding: 10px 60px;
+  background-color: var(--color-car2);
+  border-radius: 10px;
+  text-align: center;
+}
+.Next {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+.Next .N1 {
+  padding: 5px 15px;
+  background-color: var(--color-car2);
+  border-radius: 5px;
+}
+.Next a {
+  margin-left: 20px;
+  color: var(--color-car);
+  font-weight: 600;
+}
+/*End Displayed Cars*/
+/*Start Car leasing*/
+.all-leasing {
+  display: flex;
+  justify-content: center;
+  background-image: url(./wallpaperflare.com_wallpaper\ \(16\).jpg);
+  background-size: cover;
+}
+.table {
+  border: solid 1px var(--color-car);
+  padding: 30px 70px;
+  text-align: center;
+  width: fit-content;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  height: fit-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.table h4 {
+  color: var(--color-car2);
+  font-size: 20px;
+  font-weight: 700;
+}
+.table .form-1 .form-a1 {
+  display: block;
+  color: #cccccc;
+  font-weight: 700;
+}
+.table .form-1 .form-a2 {
+  padding: 10px 90px;
+  background: none;
+  color: var(--color-car2);
+  font-weight: 700;
+}
+.table .form-1 .form-a3 {
+  padding: 10px 38px;
+  background: none;
+  color: var(--color-car2);
+  font-weight: 700;
+}
+.table .Email-1 {
+  padding: 10px 60px;
+  margin-top: 20px;
+  background: none;
+  color: var(--color-car2);
+  border-color: #cccccc;
+}
+.table .phone-1 {
+  padding: 10px 60px;
+  margin-top: 20px;
+  background: none;
+  color: var(--color-car2);
+  border-color: #cccccc;
+}
+.Button-1 {
+  padding: 10px 55px;
+  margin-top: 20px;
+  background-color: var(--color-car2);
+  color: #353535;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+.Button-1:hover {
+  color: var(--color-car2);
+  background-color: var(--color-car);
+}
+.for-you1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+.for-you {
+  border: 1px solid;
+  width: 500px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.leasing {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+.leasing img {
+  width: 300px;
+}
+.leasing h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+.leasing h3 {
+  text-align: center;
+  font-size: 15px;
+  color: var(--color-car);
+}
+.leasing span {
+  font-size: 30px;
+  color: black;
+}
+
+.for-you .btn-leasing {
+  color: var(--color-car);
+  padding: 10px 40px;
+  background-color: var(--color-car2);
+
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+.for-you .btn-leasing:hover {
+  background-color: var(--color-car);
+  color: var(--color-car2);
+}
+.for-you-all {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+.more {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  font-weight: 800;
+}
+.more .more-v {
+  margin-right: 10px;
+  color: var(--color-car);
+}
+.more a {
+}
+.more i {
+  color: var(--color-car);
+}
+.trade {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  letter-spacing: 5px;
+}
+.brand {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.brand .Bmw {
+  border: 1px solid #cccccc;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand .Mercedes {
+  border: 1px solid #cccccc;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .Audi {
+  border: 1px solid #cccccc;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand .porsche {
+  border: 1px solid #cccccc;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand .Bmw img {
+  width: 150px;
+}
+
+.brand .Mercedes img {
+  width: 150px;
+}
+.brand .Audi img {
+  width: 150px;
+}
+.brand .porsche img {
+  width: 200px;
+}
+
+/*End Car leasing*/
+
+
+/* start contact us*/
+
+.contact{
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  
+}
+.contact-us{
+ 
+}
+.contact-us h2{
+   font-size: 50px;
+   font-weight: 700;
+   color: var(--color-car);
+}
+.contact-us p{
+ color: #cccccc;
+ font-weight: bold;
+}
+.contact-us .name-us{
+  display: block;
+  padding: 10px 100px;
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  
+}
+
+.contact-us .email-us{
+ display: block;
+ padding: 10px 100px;
+ border: none;
+ border-bottom: 1px solid #cccccc;
+ 
+}
+.contact-us .text-us{
+ padding: 10px 70px ;
+ border: none;
+ border-bottom: 1px solid #cccccc;
+}
+
+.btn-us{
+ display: block;
+ padding: 10px 50px;
+ border: none;
+ background-color: var(--color-car);
+ color: var(--color-car2);
+ transition: .4s;
+
+}
+.btn-us:hover{
+border: 1px solid var(--color-car2);
+color: var(--color-car2);
+background: none;
+}
+.contact-i{
+  background-color:var(--color-car);
+  width: 1000px;
+  height: 400px;
+  margin-top: 70px;
+  text-align: center;
+ 
+
+}
+.contact-i i{
+ color: var(--color-car2);
+ font-size: 35px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 30px;
+}
+.contact-i h3{
+ color: white;
+ margin-top: 10px;
+}
+.contact-i2{
+ background-color: var(--color-car2);
+ width: 200px;
+ display: flex;
+justify-content:center;
+align-items: end;
+
+
+
+
+}
+.contact-i2 i{
+margin-left: 10px;
+color: var(--color-car);
+font-size: 20px;
+}
+/* end contact us */
+
+/* Start Footer */
+  footer{
+    padding: 60px;
+    background-color: var(--color-car);
+    color: var(--color-car2);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+  }
+  footer span{
+    color: var(--color-car2);
+  }
+  footer .i{
+  display: block;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-right: 80px;
+
+  }
+  footer .i i{
+  color: var(--color-car2);
+  font-size: 25px;
+  margin-left: 70px;
+
+  }
+
+ /* end footer */
