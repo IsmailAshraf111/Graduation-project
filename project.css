@@ -12,7 +12,7 @@
   --color-car: #353535;
   --color-car2: #edb625;
   --color-car3: #f4f4f4;
-  --padding-top-car1: ;
+  
 }
 
 .container {
@@ -25,6 +25,7 @@
     width: 1050px;
   }
 }
+
 ul {
   list-style: none;
 }
@@ -190,7 +191,8 @@ header {
   margin: 0;
   text-align: center;
   font-size: 45px;
-
+  margin-top: 50px;
+  margin-bottom: 50px;
   color: var(--color-car);
 }
 
@@ -255,6 +257,11 @@ header {
   color: var(--color-car2);
   background-color: var(--color-car);
 }
+.all-cars .car-1 .text-1{
+position: relative;
+line-height: 2;
+}
+
 .all-cars .car-1 img {
   width: 300px;
   border-bottom: 1px solid;
@@ -275,9 +282,12 @@ header {
   color: var(--color-car);
   background-color: var(--color-car2);
   position: relative;
-  top: 40px;
+  top: 50px;
+
   transition: 0.4s;
 }
+ 
+
 .all-cars .btn-o1:hover {
   border: 1px solid;
   color: var(--color-car) 3;
@@ -293,7 +303,9 @@ header {
 }
 .Next {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
+  position: relative;
+  bottom: 20px;
   text-align: center;
   font-size: 20px;
 }
@@ -308,6 +320,8 @@ header {
   font-weight: 600;
 }
 /*End Displayed Cars*/
+
+
 /*Start Car leasing*/
 
 .Car-leasing-A1 {
@@ -327,7 +341,7 @@ header {
   width: fit-content;
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  height: fit-content;
+  height:550px ;
   position: relative;
   top: 25vh;
 }
@@ -338,38 +352,39 @@ header {
 }
 .table .form-1 .form-a1 {
   display: block;
-
+  margin-bottom: 10px;
+  margin-top: 10px;
   font-weight: 700;
   color: var(--color-car);
 }
 .table .form-1 .form-a2 {
-  padding: 10px 90px;
+  padding: 10px 115px;
   background: none;
 
   font-weight: 700;
 }
 .table .form-1 .form-a3 {
-  padding: 10px 38px;
+  padding: 10px 50px;
   background: none;
-
+   
   font-weight: 700;
 }
 .table .Email-1 {
   padding: 10px 60px;
   margin-top: 20px;
   background: none;
-
+  padding: 15px 70px;
   border-color: #cccccc;
 }
 .table .phone-1 {
   padding: 10px 60px;
   margin-top: 20px;
   background: none;
-
+  padding: 15px 70px;
   border-color: #cccccc;
 }
 .Button-1 {
-  padding: 10px 55px;
+  padding: 15px 65px;
   margin-top: 20px;
   background-color: var(--color-car2);
   color: #353535;
@@ -393,7 +408,7 @@ header {
 .for-you {
   border: 1px solid;
   width: 500px;
-
+  height: 300px;
   border-radius: 10px;
   transition: 0.4s;
 }
@@ -421,16 +436,47 @@ header {
   color: black;
 }
 .text-car-1 {
-  margin-top: 75px;
+  position: relative;
+ 
 }
 
 .for-you .btn-leasing {
   color: var(--color-car);
   padding: 10px 40px;
   background-color: var(--color-car2);
-
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  top: 100px;
   display: flex;
-  justify-content: center;
+  width: fit-content;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+.for-you .btn-leasing1{
+  color: var(--color-car);
+  padding: 10px 40px;
+  background-color: var(--color-car2);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50px;
+  display: flex;
+  width: fit-content;
+  border-radius: 10px;
+  transition: 0.6s;
+
+}
+.for-you .btn-leasing2{
+  color: var(--color-car);
+  padding: 10px 40px;
+  background-color: var(--color-car2);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  top:60px;
+  display: flex;
+  width: fit-content;
   border-radius: 10px;
   transition: 0.6s;
 }
@@ -571,17 +617,32 @@ header {
   background-color: var(--color-car);
   color: var(--color-car2);
   transition: 0.4s;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .btn-us:hover {
   border: 1px solid var(--color-car2);
   color: var(--color-car2);
   background: none;
 }
+.contact-us .contact-text{
+
+}
+.contact-us .contact-text h2{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+ .contact-text p{
+  font-size: 80px;
+  font-weight: 800;
+}
 .contact-i {
   background-color: var(--color-car);
   width: 1000px;
   height: 400px;
-  margin-top: 70px;
+  margin-top: 30px;  
+  
   text-align: center;
 }
 .contact-i i {
